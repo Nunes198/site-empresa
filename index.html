@@ -371,7 +371,26 @@
       top: 1.2rem;
       z-index: 2001;
     }
-
+    /* Esconde o botão MENU no desktop, mostra no mobile */
+    .menu-mobile-btn {
+      display: none;
+      margin: 0.5rem 0 0 0;
+      padding: 0.5rem 1.2rem;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 120px;
+      align-self: flex-start;
+    }
+    .menu-mobile-btn:active,
+    .menu-mobile-btn:focus {
+      background: #0a3d91;
+    }
     @media (max-width: 1100px) {
       section {
         max-width: 98vw;
@@ -436,7 +455,8 @@
           <option value="zh">🇨🇳</option>
         </select>
       </div>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <!-- Botão MENU só no mobile -->
+      <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
       <nav id="main-nav">
         <ul>
           <li><a href="#home" data-i18n="menu-home">Início</a></li>
@@ -767,6 +787,21 @@ setLanguage('pt');
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('main-nav');
     menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+    // Fecha o menu ao clicar em um link (mobile)
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 800) nav.classList.remove('open');
+      });
+    });
+  </script>
+  <!-- Botão MENU mobile -->
+  <script>
+    // Botão MENU mobile
+    const menuMobileBtn = document.getElementById('menu-mobile-btn');
+    const nav = document.getElementById('main-nav');
+    menuMobileBtn.addEventListener('click', function() {
       nav.classList.toggle('open');
     });
     // Fecha o menu ao clicar em um link (mobile)
