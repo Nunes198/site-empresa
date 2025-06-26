@@ -49,8 +49,8 @@
       gap: 1rem;
     }
     .logo img {
-      height: 80px;
-      width: 80px;
+      height: 30px;
+      width: 30px;
       border-radius: 50%;
       background: #fff;
       border: 8px solid #fff;
@@ -398,29 +398,47 @@
       }
     }
     @media (max-width: 800px) {
-      .about-content, .contact-info { flex-direction: column; }
-      .contact-info {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
+      .menu-mobile-btn {
+        display: inline-block;
+        margin-left: 0.5rem;
+        padding: 0.5rem 1.2rem;
+        background: #1976d2;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 90px;
+        align-self: center;
       }
-      .contact-block {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
+      #main-nav {
+        display: none;
+        width: 100vw;
+        background: linear-gradient(90deg, #0a3d91 60%, #1976d2 100%);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 2000;
+        box-shadow: 0 2px 16px #0002;
+        animation: fadeInSection 0.3s;
       }
-      .logo-nav { flex-direction: column; gap: 1rem; padding: 1rem 0.5rem; height: auto; }
-      nav ul { flex-direction: column; gap: 1rem; width: 100%; align-items: center; padding: 0; }
-      .hero { height: 160px; margin-top: 120px; }
-      .products-list { gap: 1rem; }
-      .product-card { width: 95vw; max-width: 340px; }
-      .about-content img, .export-map { width: 100%; max-width: 340px; }
-      .logo img { height: 40px; }
-      .top-bar { flex-direction: column; align-items: flex-end; gap: 0.5rem; padding: 0.5rem 1rem 0.5rem 0; }
-      .language-select { margin-left: 0; margin-top: 1rem; width: 100%; }
-      form { width: 100%; }
-      .logo span { font-size: 1.1rem !important; }
+      #main-nav.open {
+        display: block;
+      }
+    }
+    @media (min-width: 801px) {
+      .menu-mobile-btn {
+        display: none !important;
+      }
+      #main-nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+      }
     }
     @media (max-width: 500px) {
       .logo-nav { padding: 0.5rem 0.2rem; }
@@ -465,7 +483,6 @@
           <option value="es">🇪🇸</option>
           <option value="zh">🇨🇳</option>
         </select>
-        <!-- Botão MENU só no mobile, ao lado do seletor de idioma -->
         <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
       </div>
       <nav id="main-nav">
