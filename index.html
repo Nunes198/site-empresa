@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início - Magno Bagio Moveis</title>
+  <meta name="description" content="Exportação de produtos de pinus certificados, com qualidade, inovação e sustentabilidade.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f4f8fc;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #0a3d91 60%, #1976d2 100%);
+      color: #fff;
+      padding: 0;
+      position: relative;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      font-size: 0.95rem;
+      padding: 0.5rem 2rem 0.5rem 0;
+    }
+    .top-bar a { color: #fff; text-decoration: none; }
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      min-width: 0;
+      background: linear-gradient(90deg, #0a3d91 60%, #1976d2 100%);
+      z-index: 1000;
+      box-shadow: 0 2px 16px #0001;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background: #fff;
+      border: 8px solid #fff;
+      box-shadow: 0 2px 16px #1976d222;
+      object-fit: cover;
+      transition: transform 0.3s;
+      display: block;
+      filter: drop-shadow(0 2px 8px #0003);
+    }
+    .logo img:hover {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s, text-shadow 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #90caf9;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0; bottom: -4px;
+    }
+    nav a:hover {
+      color: #90caf9;
+      text-shadow: 0 2px 8px #1976d288;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      position: relative;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a3d91;
+      overflow: hidden;
+      margin-top: 100px;
+    }
+    .hero video, .hero img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0; top: 0;
+      z-index: 1;
+      opacity: 0.5;
+      animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 0.5; }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeInUp 1.2s;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px #0006;
+      animation: fadeInDown 1s;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px #0006;
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+      padding: 2rem;
+      animation: fadeInSection 1.2s;
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .section-title {
+      color: #0a3d91;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #1976d211;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-content img {
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px #1976d222;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .about-content img:hover {
+      transform: scale(1.04) rotate(-1deg);
+      box-shadow: 0 8px 32px #1976d244;
+    }
+    .about-text {
+      flex: 1 1 300px;
+      font-size: 1.1rem;
+      animation: fadeInUp 1.2s;
+    }
+    .products-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .product-card {
+      background: #e3f2fd;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 1.5rem;
+      width: 220px;
+      text-align: center;
+      transition: 
+        transform 0.25s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.25s cubic-bezier(.4,2,.6,1),
+        background 0.25s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 32px #1976d244;
+      background: linear-gradient(120deg, #e3f2fd 80%, #bbdefb 100%);
+    }
+    .product-card::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 0; height: 0;
+      background: rgba(25, 118, 210, 0.08);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s;
+      z-index: 0;
+    }
+    .product-card:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+    .product-card img, .product-card h3, .product-card p {
+      position: relative;
+      z-index: 1;
+    }
+    .product-card img {
+      width: 80px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 8px #1976d222);
+      transition: transform 0.3s;
+    }
+    .export-map {
+      width: 320px;
+      height: 320px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 32px #1976d222;
+      border: 10px solid #fff;
+      object-fit: cover;
+      animation: fadeInSection 1.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .export-map:hover {
+      transform: scale(1.03) rotate(-1deg);
+      box-shadow: 0 8px 32px #1976d244;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .contact-block {
+      flex: 1 1 220px;
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px #1976d222;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .contact-block:hover {
+      box-shadow: 0 8px 32px #1976d244;
+      transform: scale(1.04);
+    }
+    .contact-block i {
+      color: #1976d2;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+    .contact-block:hover i {
+      color: #0a3d91;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeInUp 1.2s;
+    }
+    input, textarea {
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #b3c6e0;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    input:focus, textarea:focus {
+      border: 1.5px solid #1976d2;
+      box-shadow: 0 2px 8px #1976d222;
+      outline: none;
+    }
+    button {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px #1976d222;
+    }
+    button:hover {
+      background: #0a3d91;
+      box-shadow: 0 4px 16px #1976d244;
+      transform: translateY(-2px) scale(1.03);
+    }
+    footer {
+      background: #0a3d91;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      margin-top: 2rem;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 -2px 16px #1976d211;
+    }
+    .language-select {
+      margin-left: 1.5rem;
+      padding: 0.4rem 1.2rem;
+      border-radius: 6px;
+      border: 1px solid #1976d2;
+      font-size: 1rem;
+      background: #fff;
+      color: #1976d2;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #1976d211;
+      transition: border 0.2s;
+    }
+    .language-select:focus {
+      outline: none;
+      border: 2px solid #0a3d91;
+    }
+    @media (max-width: 1100px) {
+      section {
+        max-width: 98vw;
+        padding: 1rem;
+      }
+    }
+    @media (max-width: 800px) {
+      .about-content, .contact-info { flex-direction: column; }
+      .logo-nav { flex-direction: column; gap: 1rem; padding: 1rem 0.5rem; height: auto; }
+      nav ul { flex-direction: column; gap: 1rem; width: 100%; align-items: center; padding: 0; }
+      .hero { height: 160px; margin-top: 120px; }
+      .products-list { gap: 1rem; }
+      .product-card { width: 95vw; max-width: 340px; }
+      .about-content img, .export-map { width: 100%; max-width: 340px; }
+      .logo img { height: 40px; }
+      .top-bar { flex-direction: column; align-items: flex-end; gap: 0.5rem; padding: 0.5rem 1rem 0.5rem 0; }
+      .language-select { margin-left: 0; margin-top: 1rem; width: 100%; }
+      form { width: 100%; }
+      .logo span { font-size: 1.1rem !important; }
+    }
+    @media (max-width: 500px) {
+      .logo-nav { padding: 0.5rem 0.2rem; }
+      .hero { height: 90px; margin-top: 110px; }
+      .logo span { font-size: 1rem !important; }
+    }
+    #gallery-modal > div {
+      max-width: 98vw;
+      max-height: 98vh;
+      padding: 1rem;
+    }
+    #gallery-images img {
+      max-width: 90vw;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <a href="tel:+5554999506110"><i class="fa fa-phone"></i> (54) 9 9950-6110</a>
+      <a href="mailto:contato@bluepine.com"><i class="fa fa-envelope"></i> contato@bluepine.com</a>
+      <a href="https://wa.me/5554999506110" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="logo-nav">
+      <div class="logo" style="display:flex;align-items:center;gap:1rem;">
+        <img src="site-institucional/public/assets/images/logo.png" alt="Logo">
+        <span style="font-size:1.5rem;font-weight:bold;letter-spacing:1px;">Magno Bagio</span>
+        <select id="language-select" class="language-select" aria-label="Selecionar idioma">
+          <option value="pt">🇧🇷 Português</option>
+          <option value="en">🇺🇸 English</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="zh">🇨🇳 中文</option>
+        </select>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" data-i18n="menu-home">Início</a></li>
+          <li><a href="#quem-somos" data-i18n="menu-about">Quem Somos</a></li>
+          <li><a href="#produtos" data-i18n="menu-products">Produtos</a></li>
+          <li><a href="#exportacao" data-i18n="menu-export">Exportação</a></li>
+          <li><a href="#contato" data-i18n="menu-contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero" id="home">
+      <video src="site-institucional/public/assets/video/navio2.png" autoplay muted loop></video>
+      <div class="hero-content">
+        <h1 data-i18n="hero-title">Excelência em Exportação de Pinus Sustentável</h1>
+        <p data-i18n="hero-desc">
+          Conectamos o Brasil ao mundo com produtos de madeira de alta qualidade, inovação e compromisso ambiental.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section id="quem-somos">
+    <h2 class="section-title" data-i18n="about-title">Quem Somos</h2>
+    <div class="about-content">
+      <img src="site-institucional/public/assets/images/pinheiro.png" alt="Pinus Sustentável">
+      <div class="about-text">
+        <p data-i18n="about-text-1">
+          A <strong>Magno Bagio Moveis</strong> é especialista em exportação de produtos de pinus sustentável desde 1992. Nossa paixão é entregar soluções inovadoras em madeira, respeitando o meio ambiente e superando as expectativas dos nossos clientes globais.
+        </p>
+        <p data-i18n="about-text-2">
+          Atendemos mercados exigentes na América do Norte, Europa e outros continentes, sempre com foco em qualidade, personalização e certificação internacional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <h2 class="section-title" data-i18n="products-title">Linha de Produtos</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;" data-i18n="products-desc">
+      Produtos sob medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.
+    </p>
+    <div class="products-list">
+      <div class="product-card" data-gallery="molduras">
+        <img src="site-institucional/public/assets/images/moldura.png" alt="Molduras">
+        <h3 data-i18n="product-molduras-title">Molduras</h3>
+        <p data-i18n="product-molduras-desc">Design moderno e resistência, ideais para ambientes internos e externos.</p>
+      </div>
+      <div class="product-card" data-gallery="batentes">
+        <img src="site-institucional/public/assets/images/batente.png" alt="Batentes">
+        <h3 data-i18n="product-batentes-title">Batentes</h3>
+        <p data-i18n="product-batentes-desc">Durabilidade e precisão para portas e janelas, com acabamento impecável.</p>
+      </div>
+      <div class="product-card" data-gallery="vigas">
+        <img src="site-institucional/public/assets/images/virga.png" alt="Vigas">
+        <h3 data-i18n="product-vigas-title">Vigas</h3>
+        <p data-i18n="product-vigas-desc">Estruturas robustas para construção civil, com madeira de reflorestamento.</p>
+      </div>
+      <div class="product-card" data-gallery="paineis">
+        <img src="site-institucional/public/assets/images/painel.png" alt="Painéis">
+        <h3 data-i18n="product-paineis-title">Painéis</h3>
+        <p data-i18n="product-paineis-desc">Versatilidade para móveis e decoração, com acabamento natural ou especial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="exportacao">
+    <h2 class="section-title" data-i18n="export-title">Exportação Global</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;" data-i18n="export-desc">
+      Levamos a qualidade do pinus brasileiro para todos os continentes, com logística eficiente e atendimento personalizado. Nossos produtos são reconhecidos internacionalmente pela sustentabilidade e inovação.
+    </p>
+    <img class="export-map" src="site-institucional/public/assets/images/mapa.png" alt="Mapa">
+  </section>
+
+  <section id="contato">
+    <h2 class="section-title" data-i18n="contact-title">Fale Conosco</h2>
+    <div class="contact-info">
+      <div class="contact-block">
+        <i class="fa fa-phone"></i>
+        <div>(54) 9 9950-6110</div>
+      </div>
+      <div class="contact-block">
+        <i class="fa fa-envelope"></i>
+        <div>contato@bluepine.com</div>
+      </div>
+      <div class="contact-block">
+        <i class="fab fa-whatsapp"></i>
+        <div>WhatsApp: (54) 9 9950-6110</div>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="Seu nome" required data-i18n-placeholder="input-name">
+      <input type="email" placeholder="Seu e-mail" required data-i18n-placeholder="input-email">
+      <input type="tel" placeholder="Seu telefone" data-i18n-placeholder="input-phone">
+      <textarea rows="4" placeholder="Sua mensagem" required data-i18n-placeholder="input-message"></textarea>
+      <button type="submit" data-i18n="send-message">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer>
+    <span data-i18n="footer">&copy; 2025 Magno Bagio Moveis - Todos os direitos reservados.<br>
+    Rua Henrique Coelho Neto, 1171- Pinhais/PR - Brasil</span>
+  </footer>
+
+  <!-- Modal da Galeria -->
+  <div id="gallery-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <div style="background:#fff;border-radius:10px;max-width:90vw;max-height:90vh;overflow:auto;padding:2rem;position:relative;">
+      <button onclick="closeGallery()" style="position:absolute;top:10px;right:20px;font-size:2rem;background:none;border:none;cursor:pointer;color:#1976d2;">&times;</button>
+      <h2 id="gallery-title" style="color:#1976d2;text-align:center;margin-bottom:1rem;"></h2>
+      <div id="gallery-images" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;"></div>
+    </div>
+  </div>
+  <script>
+    // Galerias de exemplo (troque pelos nomes reais das imagens)
+    const galleries = {
+      molduras: [
+        'site-institucional/public/assets/images/moldura1.png',
+        'site-institucional/public/assets/images/moldura2.png',
+        'site-institucional/public/assets/images/moldura3.png'
+      ],
+      batentes: [
+        'site-institucional/public/assets/images/batente1.png',
+        'site-institucional/public/assets/images/batente2.png'
+      ],
+      vigas: [
+        'site-institucional/public/assets/images/virga1.png',
+        'site-institucional/public/assets/images/virga3.png'
+      ],
+      paineis: [
+        'site-institucional/public/assets/images/paineis1.jpg',
+        'site-institucional/public/assets/images/paineis2.jpg'
+      ]
+    };
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function() {
+        const galleryKey = this.getAttribute('data-gallery');
+        const title = this.querySelector('h3').innerText;
+        openGallery(galleryKey, title);
+      });
+    });
+
+    function openGallery(galleryKey, title) {
+      document.getElementById('gallery-title').innerText = title;
+      const images = galleries[galleryKey] || [];
+      const container = document.getElementById('gallery-images');
+      container.innerHTML = images.map(src => `<img src="${src}" style="max-width:200px;max-height:200px;border-radius:8px;box-shadow:0 2px 8px #0002;">`).join('');
+      document.getElementById('gallery-modal').style.display = 'flex';
+    }
+    function closeGallery() {
+      document.getElementById('gallery-modal').style.display = 'none';
+    }
+    document.getElementById('gallery-modal').addEventListener('click', function(e){
+      if(e.target === this) closeGallery();
+    });
+  </script>
+  <script>
+const translations = {
+  pt: {
+    "menu-home": "Início",
+    "menu-about": "Quem Somos",
+    "menu-products": "Produtos",
+    "menu-export": "Exportação",
+    "menu-contact": "Contato",
+    "hero-title": "Excelência em Exportação de Pinus Sustentável",
+    "hero-desc": "Conectamos o Brasil ao mundo com produtos de madeira de alta qualidade, inovação e compromisso ambiental.",
+    "about-title": "Quem Somos",
+    "about-text-1": "A <strong>Magno Bagio Moveis</strong> é especialista em exportação de produtos de pinus sustentável desde 1992. Nossa paixão é entregar soluções inovadoras em madeira, respeitando o meio ambiente e superando as expectativas dos nossos clientes globais.",
+    "about-text-2": "Atendemos mercados exigentes na América do Norte, Europa e outros continentes, sempre com foco em qualidade, personalização e certificação internacional.",
+    "products-title": "Linha de Produtos",
+    "products-desc": "Produtos sob medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.",
+    "product-molduras-title": "Molduras",
+    "product-molduras-desc": "Design moderno e resistência, ideais para ambientes internos e externos.",
+    "product-batentes-title": "Batentes",
+    "product-batentes-desc": "Durabilidade e precisão para portas e janelas, com acabamento impecável.",
+    "product-vigas-title": "Vigas",
+    "product-vigas-desc": "Estruturas robustas para construção civil, com madeira de reflorestamento.",
+    "product-paineis-title": "Painéis",
+    "product-paineis-desc": "Versatilidade para móveis e decoração, com acabamento natural ou especial.",
+    "export-title": "Exportação Global",
+    "export-desc": "Levamos a qualidade do pinus brasileiro para todos os continentes, com logística eficiente e atendimento personalizado. Nossos produtos são reconhecidos internacionalmente pela sustentabilidade e inovação.",
+    "contact-title": "Fale Conosco",
+    "send-message": "Enviar Mensagem",
+    "footer": "&copy; 2025 Magno Bagio Moveis - Todos os direitos reservados.<br>Rua Henrique Coelho Neto, 1171- Pinhais/PR - Brasil",
+    "input-name": "Seu nome",
+    "input-email": "Seu e-mail",
+    "input-phone": "Seu telefone",
+    "input-message": "Sua mensagem"
+  },
+  en: {
+    "menu-home": "Home",
+    "menu-about": "About Us",
+    "menu-products": "Products",
+    "menu-export": "Export",
+    "menu-contact": "Contact",
+    "hero-title": "Excellence in Sustainable Pine Export",
+    "hero-desc": "We connect Brazil to the world with high-quality wood products, innovation, and environmental commitment.",
+    "about-title": "About Us",
+    "about-text-1": "<strong>Magno Bagio Moveis</strong> specializes in exporting sustainable pine products since 1992. Our passion is to deliver innovative wood solutions, respecting the environment and exceeding the expectations of our global clients.",
+    "about-text-2": "We serve demanding markets in North America, Europe, and other continents, always focusing on quality, customization, and international certification.",
+    "products-title": "Product Line",
+    "products-desc": "Custom-made products with superior finish and dimensional precision. We develop solutions for every project need.",
+    "product-molduras-title": "Frames",
+    "product-molduras-desc": "Modern design and durability, ideal for indoor and outdoor environments.",
+    "product-batentes-title": "Door Frames",
+    "product-batentes-desc": "Durability and precision for doors and windows, with impeccable finish.",
+    "product-vigas-title": "Beams",
+    "product-vigas-desc": "Robust structures for civil construction, with reforested wood.",
+    "product-paineis-title": "Panels",
+    "product-paineis-desc": "Versatility for furniture and decoration, with natural or special finish.",
+    "export-title": "Global Export",
+    "export-desc": "We bring the quality of Brazilian pine to all continents, with efficient logistics and personalized service. Our products are internationally recognized for sustainability and innovation.",
+    "contact-title": "Contact Us",
+    "send-message": "Send Message",
+    "footer": "&copy; 2025 Magno Bagio Moveis - All rights reserved.<br>Rua Henrique Coelho Neto, 1171- Pinhais/PR - Brazil",
+    "input-name": "Your name",
+    "input-email": "Your email",
+    "input-phone": "Your phone",
+    "input-message": "Your message"
+  },
+  es: {
+    "menu-home": "Inicio",
+    "menu-about": "Quiénes Somos",
+    "menu-products": "Productos",
+    "menu-export": "Exportación",
+    "menu-contact": "Contacto",
+    "hero-title": "Excelencia en Exportación de Pino Sostenible",
+    "hero-desc": "Conectamos Brasil con el mundo con productos de madera de alta calidad, innovación y compromiso ambiental.",
+    "about-title": "Quiénes Somos",
+    "about-text-1": "<strong>Magno Bagio Moveis</strong> es especialista en exportación de productos de pino sostenible desde 1992. Nuestra pasión es entregar soluciones innovadoras en madera, respetando el medio ambiente y superando las expectativas de nuestros clientes globales.",
+    "about-text-2": "Atendemos mercados exigentes en América del Norte, Europa y otros continentes, siempre enfocados en calidad, personalización y certificación internacional.",
+    "products-title": "Línea de Productos",
+    "products-desc": "Productos a medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.",
+    "product-molduras-title": "Marcos",
+    "product-molduras-desc": "Diseño moderno y resistencia, ideales para ambientes interiores y exteriores.",
+    "product-batentes-title": "Marcos de Puerta",
+    "product-batentes-desc": "Durabilidad y precisión para puertas y ventanas, com acabamento impecable.",
+    "product-vigas-title": "Vigas",
+    "product-vigas-desc": "Estructuras robustas para la construcción civil, con madera de reforestación.",
+    "product-paineis-title": "Paneles",
+    "product-paineis-desc": "Versatilidad para muebles y decoración, con acabado natural o especial.",
+    "export-title": "Exportación Global",
+    "export-desc": "Llevamos la calidad del pino brasileño a todos los continentes, con logística eficiente y atención personalizada. Nuestros productos son reconocidos internacionalmente por su sostenibilidad e innovación.",
+    "contact-title": "Contáctenos",
+    "send-message": "Enviar Mensaje",
+    "footer": "&copy; 2025 Magno Bagio Moveis - Todos los derechos reservados.<br>Rua Henrique Coelho Neto, 1171- Pinhais/PR - Brasil",
+    "input-name": "Su nombre",
+    "input-email": "Su correo electrónico",
+    "input-phone": "Su teléfono",
+    "input-message": "Su mensaje"
+  },
+  zh: {
+    "menu-home": "首页",
+    "menu-about": "关于我们",
+    "menu-products": "产品",
+    "menu-export": "出口",
+    "menu-contact": "联系",
+    "hero-title": "可持续松木出口的卓越品质",
+    "hero-desc": "我们以高品质木材、创新和环保承诺，将巴西与世界连接。",
+    "about-title": "关于我们",
+    "about-text-1": "<strong>Magno Bagio Moveis</strong> 自1992年以来专注于可持续松木产品的出口。我们的热情是提供创新的木材解决方案，尊重环境并超越全球客户的期望。",
+    "about-text-2": "我们服务于北美、欧洲及其他大陆的高要求市场，始终专注于质量、个性化和国际认证。",
+    "products-title": "产品线",
+    "products-desc": "量身定制的产品，优质的表面处理和尺寸精度。我们为您的每个项目需求开发解决方案。",
+    "product-molduras-title": "框架",
+    "product-molduras-desc": "现代设计和耐用性，适用于室内和室外环境。",
+    "product-batentes-title": "门框",
+    "product-batentes-desc": "适用于门窗的耐用性和精确性，表面处理完美。",
+    "product-vigas-title": "梁",
+    "product-vigas-desc": "用于土木建筑的坚固结构，采用再造林木材。",
+    "product-paineis-title": "面板",
+    "product-paineis-desc": "适用于家具和装饰的多功能性，具有天然或特殊表面处理。",
+    "export-title": "全球出口",
+    "export-desc": "我们将巴西松木的品质带到世界各地，物流高效，服务个性化。我们的产品因可持续性和创新而享誉国际。",
+    "contact-title": "联系我们",
+    "send-message": "发送信息",
+    "footer": "&copy; 2025 Magno Bagio Moveis - 保留所有权利。<br>Rua Henrique Coelho Neto, 1171- Pinhais/PR - 巴西",
+    "input-name": "您的姓名",
+    "input-email": "您的邮箱",
+    "input-phone": "您的电话",
+    "input-message": "您的信息"
+  }
+};
+
+function setLanguage(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      // Permite HTML em alguns textos (ex: <strong>)
+      if (el.tagName === "H1" || el.tagName === "H2" || el.tagName === "P" || el.tagName === "SPAN" || el.tagName === "DIV" || el.tagName === "H3") {
+        el.innerHTML = translations[lang][key];
+      } else {
+        el.textContent = translations[lang][key];
+      }
+    }
+  });
+  // Placeholders dos inputs
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+}
+
+document.getElementById('language-select').addEventListener('change', function() {
+  setLanguage(this.value);
+});
+
+// Define o idioma inicial
+setLanguage('pt');
+  </script>
+  <script>
+    // Função para definir o idioma inicial
+    function setInitialLanguage() {
+      const userLang = navigator.language || navigator.userLanguage;
+      let lang = 'pt';
+      if (userLang.startsWith('en')) lang = 'en';
+      else if (userLang.startsWith('es')) lang = 'es';
+      else if (userLang.startsWith('zh')) lang = 'zh';
+      document.getElementById('language-select').value = lang;
+      setLanguage(lang);
+    }
+    window.onload = setInitialLanguage;
+  </script>
+</body>
+</html>

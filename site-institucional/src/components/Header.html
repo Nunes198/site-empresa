@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início - BluePine Export</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Estilos básicos */
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f4f8fc;
+      color: #222;
+    }
+    .products-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .product-card {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 220px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .image-panel {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .image-panel img {
+      max-width: 90%;
+      max-height: 90%;
+      margin: 10px;
+    }
+    .close-panel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="produtos">
+    <h2 class="section-title">Linha de Produtos</h2>
+    <div class="products-list">
+      <div class="product-card" onclick="openPanel('molduras')">
+        <h3>Molduras</h3>
+      </div>
+      <div class="product-card" onclick="openPanel('batentes')">
+        <h3>Batentes</h3>
+      </div>
+      <div class="product-card" onclick="openPanel('vigas')">
+        <h3>Vigas</h3>
+      </div>
+      <div class="product-card" onclick="openPanel('painéis')">
+        <h3>Painéis</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Painéis de Imagens -->
+  <div id="molduras" class="image-panel">
+    <span class="close-panel" onclick="closePanel()">×</span>
+    <img src="assets/images/moldura1.jpg" alt="Moldura 1">
+    <img src="assets/images/moldura2.jpg" alt="Moldura 2">
+    <img src="assets/images/moldura3.jpg" alt="Moldura 3">
+  </div>
+
+  <div id="batentes" class="image-panel">
+    <span class="close-panel" onclick="closePanel()">×</span>
+    <img src="assets/images/batente1.jpg" alt="Batente 1">
+    <img src="assets/images/batente2.jpg" alt="Batente 2">
+    <img src="assets/images/batente3.jpg" alt="Batente 3">
+  </div>
+
+  <div id="vigas" class="image-panel">
+    <span class="close-panel" onclick="closePanel()">×</span>
+    <img src="assets/images/viga1.jpg" alt="Viga 1">
+    <img src="assets/images/viga2.jpg" alt="Viga 2">
+    <img src="assets/images/viga3.jpg" alt="Viga 3">
+  </div>
+
+  <div id="painéis" class="image-panel">
+    <span class="close-panel" onclick="closePanel()">×</span>
+    <img src="assets/images/painel1.jpg" alt="Painel 1">
+    <img src="assets/images/painel2.jpg" alt="Painel 2">
+    <img src="assets/images/painel3.jpg" alt="Painel 3">
+  </div>
+
+  <script>
+    function openPanel(product) {
+      document.getElementById(product).style.display = 'flex';
+    }
+
+    function closePanel() {
+      const panels = document.querySelectorAll('.image-panel');
+      panels.forEach(panel => {
+        panel.style.display = 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

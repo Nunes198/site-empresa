@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início - BluePine Export</title>
+  <meta name="description" content="Exportação de produtos de pinus certificados, com qualidade, inovação e sustentabilidade.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Estilos existentes... */
+    /* Adicione seus estilos aqui */
+    .product-gallery {
+      display: none;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .product-gallery img {
+      width: 100px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Conteúdo do cabeçalho... -->
+  </header>
+
+  <section id="produtos">
+    <h2 class="section-title">Linha de Produtos</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;">
+      Produtos sob medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.
+    </p>
+    <div class="products-list">
+      <div class="product-card" onclick="showGallery('molduras')">
+        <img src="assets/images/produto-moldura.png" alt="Molduras">
+        <h3>Molduras</h3>
+        <p>Design moderno e resistência, ideais para ambientes internos e externos.</p>
+      </div>
+      <div class="product-card" onclick="showGallery('batentes')">
+        <img src="assets/images/produto-batente.png" alt="Batentes">
+        <h3>Batentes</h3>
+        <p>Durabilidade e precisão para portas e janelas, com acabamento impecável.</p>
+      </div>
+      <div class="product-card" onclick="showGallery('vigas')">
+        <img src="assets/images/produto-viga.png" alt="Vigas">
+        <h3>Vigas</h3>
+        <p>Estruturas robustas para construção civil, com madeira de reflorestamento.</p>
+      </div>
+      <div class="product-card" onclick="showGallery('painéis')">
+        <img src="assets/images/produto-painel.png" alt="Painéis">
+        <h3>Painéis</h3>
+        <p>Versatilidade para móveis e decoração, com acabamento natural ou especial.</p>
+      </div>
+    </div>
+
+    <!-- Galerias de produtos -->
+    <div id="molduras" class="product-gallery">
+      <img src="assets/images/moldura1.jpg" alt="Moldura 1">
+      <img src="assets/images/moldura2.jpg" alt="Moldura 2">
+      <img src="assets/images/moldura3.jpg" alt="Moldura 3">
+    </div>
+    <div id="batentes" class="product-gallery">
+      <img src="assets/images/batente1.jpg" alt="Batente 1">
+      <img src="assets/images/batente2.jpg" alt="Batente 2">
+      <img src="assets/images/batente3.jpg" alt="Batente 3">
+    </div>
+    <div id="vigas" class="product-gallery">
+      <img src="assets/images/viga1.jpg" alt="Viga 1">
+      <img src="assets/images/viga2.jpg" alt="Viga 2">
+      <img src="assets/images/viga3.jpg" alt="Viga 3">
+    </div>
+    <div id="painéis" class="product-gallery">
+      <img src="assets/images/painel1.jpg" alt="Painel 1">
+      <img src="assets/images/painel2.jpg" alt="Painel 2">
+      <img src="assets/images/painel3.jpg" alt="Painel 3">
+    </div>
+  </section>
+
+  <section id="exportacao">
+    <!-- Conteúdo da seção de exportação... -->
+  </section>
+
+  <section id="contato">
+    <!-- Conteúdo da seção de contato... -->
+  </section>
+
+  <footer>
+    &copy; 2025 BluePine Export - Todos os direitos reservados.<br>
+    Rua Exemplo, 1000 - Bento Gonçalves/RS - Brasil
+  </footer>
+
+  <script>
+    function showGallery(product) {
+      // Esconder todas as galerias
+      const galleries = document.querySelectorAll('.product-gallery');
+      galleries.forEach(gallery => {
+        gallery.classList.remove('active');
+      });
+
+      // Mostrar a galeria correspondente
+      const activeGallery = document.getElementById(product);
+      activeGallery.classList.add('active');
+    }
+  </script>
+</body>
+</html>
