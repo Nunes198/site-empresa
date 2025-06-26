@@ -374,7 +374,7 @@
     /* Esconde o botão MENU no desktop, mostra no mobile */
     .menu-mobile-btn {
       display: none;
-      margin: 0.5rem 0 0 0;
+      margin-left: 0.5rem;
       padding: 0.5rem 1.2rem;
       background: #1976d2;
       color: #fff;
@@ -384,8 +384,8 @@
       font-weight: bold;
       cursor: pointer;
       transition: background 0.2s;
-      width: 120px;
-      align-self: flex-start;
+      width: 90px;
+      align-self: center;
     }
     .menu-mobile-btn:active,
     .menu-mobile-btn:focus {
@@ -465,9 +465,9 @@
           <option value="es">🇪🇸</option>
           <option value="zh">🇨🇳</option>
         </select>
+        <!-- Botão MENU só no mobile, ao lado do seletor de idioma -->
+        <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
       </div>
-      <!-- Botão MENU só no mobile -->
-      <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
       <nav id="main-nav">
         <ul>
           <li><a href="#home" data-i18n="menu-home">Início</a></li>
@@ -495,7 +495,7 @@
       <img src="site-institucional/public/assets/images/pinheiro.png" alt="Pinus Sustentável">
       <div class="about-text">
         <p data-i18n="about-text-1">
-          A <strong>Magno Bagio Moveis</strong> é especialista em exportação de produtos de pinus sustentável desde 1992. Nossa paixão é entregar soluções inovadoras em madeira, respeitando o meio ambiente e superando as expectativas dos nossos clientes globais.
+          A <strong>Magno Bagio Moveis</strong> é especialista em exportação de produtos de pinus sustentável desde 2012. Nossa paixão é entregar soluções inovadoras em madeira, respeitando o meio ambiente e superando as expectativas dos nossos clientes globais.
         </p>
         <p data-i18n="about-text-2">
           Atendemos mercados exigentes na América do Norte, Europa e outros continentes, sempre com foco em qualidade, personalização e certificação internacional.
