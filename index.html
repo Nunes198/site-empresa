@@ -358,6 +358,20 @@
       outline: none;
       border: 2px solid #0a3d91;
     }
+    /* Botão do menu hamburguer (mobile) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.2rem;
+      z-index: 2001;
+    }
+
     @media (max-width: 1100px) {
       section {
         max-width: 98vw;
@@ -382,6 +396,16 @@
       .logo-nav { padding: 0.5rem 0.2rem; }
       .hero { height: 90px; margin-top: 110px; }
       .logo span { font-size: 1rem !important; }
+      .language-select {
+        width: 70px;
+        font-size: 0.75rem;
+        padding: 0.1rem 0.3rem;
+      }
+      .menu-toggle {
+        top: 0.7rem;
+        right: 0.7rem;
+        font-size: 1.7rem;
+      }
     }
     #gallery-modal > div {
       max-width: 98vw;
@@ -406,13 +430,14 @@
         <img src="site-institucional/public/assets/images/logo.png" alt="Logo">
         <span style="font-size:1.5rem;font-weight:bold;letter-spacing:1px;">Magno Bagio</span>
         <select id="language-select" class="language-select" aria-label="Selecionar idioma">
-          <option value="pt">🇧🇷 Português</option>
-          <option value="en">🇺🇸 English</option>
-          <option value="es">🇪🇸 Español</option>
-          <option value="zh">🇨🇳 中文</option>
+          <option value="pt">🇧🇷</option>
+          <option value="en">🇺🇸</option>
+          <option value="es">🇪🇸</option>
+          <option value="zh">🇨🇳</option>
         </select>
       </div>
-      <nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <nav id="main-nav">
         <ul>
           <li><a href="#home" data-i18n="menu-home">Início</a></li>
           <li><a href="#quem-somos" data-i18n="menu-about">Quem Somos</a></li>
@@ -736,6 +761,20 @@ setLanguage('pt');
       setLanguage(lang);
     }
     window.onload = setInitialLanguage;
+  </script>
+  <script>
+    // Menu mobile toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+    // Fecha o menu ao clicar em um link (mobile)
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 800) nav.classList.remove('open');
+      });
+    });
   </script>
 </body>
 </html>
