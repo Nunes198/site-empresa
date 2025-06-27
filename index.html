@@ -407,7 +407,7 @@
         position: relative;
       }
       .logo {
-        width: 100%;
+        width: auto;
         justify-content: flex-start;
         gap: 0.5rem;
         flex-wrap: wrap;
@@ -421,7 +421,7 @@
       }
       .menu-mobile-btn {
         display: inline-block;
-        margin-left: 0.5rem;
+        margin-left: 0;
         margin-top: 0.5rem;
       }
       #main-nav {
@@ -495,13 +495,15 @@
       <div class="logo" style="display:flex;align-items:center;gap:1rem;">
         <img src="site-institucional/public/assets/images/logo.png" alt="Logo">
         <span style="font-size:1.5rem;font-weight:bold;letter-spacing:1px;">Magno Bagio</span>
-        <select id="language-select" class="language-select" aria-label="Selecionar idioma">
-          <option value="pt">🇧🇷</option>
-          <option value="en">🇺🇸</option>
-          <option value="es">🇪🇸</option>
-          <option value="zh">🇨🇳</option>
-        </select>
-        <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <select id="language-select" class="language-select" aria-label="Selecionar idioma">
+            <option value="pt">🇧🇷</option>
+            <option value="en">🇺🇸</option>
+            <option value="es">🇪🇸</option>
+            <option value="zh">🇨🇳</option>
+          </select>
+          <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
+        </div>
       </div>
       <nav id="main-nav">
         <ul>
