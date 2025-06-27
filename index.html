@@ -414,27 +414,31 @@
       .logo {
         width: 100%;
         justify-content: flex-start;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .logo > div {
-        display: flex;
-        align-items: center;
         gap: 0.5rem;
         flex-wrap: nowrap;
       }
+      .logo img {
+        height: 24px;
+        width: 24px;
+        border-width: 5px;
+      }
+      .logo span {
+        font-size: 1rem !important;
+      }
       .language-select {
-        margin-left: 0;
+        margin-left: 0.2rem;
         margin-top: 0;
-        width: 90px;
-        font-size: 0.85rem;
-        padding: 0.2rem 0.5rem;
+        width: 60px;
+        font-size: 0.8rem;
+        padding: 0.15rem 0.4rem;
       }
       .menu-mobile-btn {
         display: inline-block;
-        margin-left: 0;
+        margin-left: 0.2rem;
         margin-top: 0;
-        width: 90px;
+        width: 60px;
+        font-size: 0.8rem;
+        padding: 0.15rem 0.4rem;
       }
       #main-nav {
         display: none;
@@ -501,19 +505,16 @@
       <a href="https://wa.me/5554999506110" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
     <div class="logo-nav">
-      <div class="logo" style="display:flex;align-items:center;gap:1rem;">
+      <div class="logo" style="display:flex;align-items:center;gap:0.5rem;width:100%;">
         <img src="site-institucional/public/assets/images/logo.png" alt="Logo">
-        <span style="font-size:1.5rem;font-weight:bold;letter-spacing:1px;">Magno Bagio</span>
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <select id="language-select" class="language-select" aria-label="Selecionar idioma">
-            <option value="pt">🇧🇷</option>
-            <option value="en">🇺🇸</option>
-            <option value="es">🇪🇸</option>
-            <option value="zh">🇨🇳</option>
-          </select>
-          <!-- Botão MENU ao lado do seletor de idioma -->
-          <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
-        </div>
+        <span style="font-size:1.2rem;font-weight:bold;letter-spacing:1px;white-space:nowrap;">Magno Bagio</span>
+        <select id="language-select" class="language-select" aria-label="Selecionar idioma">
+          <option value="pt">🇧🇷</option>
+          <option value="en">🇺🇸</option>
+          <option value="es">🇪🇸</option>
+          <option value="zh">🇨🇳</option>
+        </select>
+        <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
       </div>
       <nav id="main-nav">
         <ul>
