@@ -490,18 +490,7 @@
       max-width: 90vw;
       height: auto;
     }
-    /* Botão MENU mobile */
-    const menuMobileBtn = document.getElementById('menu-mobile-btn');
-    const nav = document.getElementById('main-nav');
-    menuMobileBtn.addEventListener('click', function() {
-      nav.classList.toggle('open');
-    });
-    // Fecha o menu ao clicar em um link (mobile)
-    document.querySelectorAll('#main-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        if(window.innerWidth <= 800) nav.classList.remove('open');
-      });
-    });
+    
   </style>
 </head>
 <body>
