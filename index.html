@@ -374,7 +374,7 @@
     /* Esconde o botão MENU no desktop, mostra no mobile */
     .menu-mobile-btn {
       display: none;
-      margin-left: 0.5rem;
+      margin-left: 0;
       padding: 0.5rem 1.2rem;
       background: #1976d2;
       color: #fff;
@@ -445,6 +445,18 @@
       max-width: 90vw;
       height: auto;
     }
+    /* Botão MENU mobile */
+    const menuMobileBtn = document.getElementById('menu-mobile-btn');
+    const nav = document.getElementById('main-nav');
+    menuMobileBtn.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+    // Fecha o menu ao clicar em um link (mobile)
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 800) nav.classList.remove('open');
+      });
+    });
   </style>
 </head>
 <body>
@@ -465,6 +477,7 @@
             <option value="es">🇪🇸</option>
             <option value="zh">🇨🇳</option>
           </select>
+          <!-- Botão MENU ao lado do seletor de idioma -->
           <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
         </div>
       </div>
