@@ -1,34 +1,28 @@
 <section id="produtos">
-    <h2 class="section-title">Linha de Produtos</h2>
-    <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;">
-        Produtos sob medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.
+    <h2 class="section-title" data-i18n="products-title">Linha de Produtos</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;" data-i18n="products-desc">
+      Produtos sob medida, com acabamento superior e precisão nas dimensões. Desenvolvemos soluções para cada necessidade do seu projeto.
     </p>
     <div class="products-list">
-        <div class="product-card" onclick="showImages('molduras')">
-            <img src="assets/images/produto-moldura.png" alt="Molduras">
-            <h3>Molduras</h3>
-            <p>Design moderno e resistência, ideais para ambientes internos e externos.</p>
-        </div>
-        <div class="product-card" onclick="showImages('batentes')">
-            <img src="assets/images/produto-batente.png" alt="Batentes">
-            <h3>Batentes</h3>
-            <p>Durabilidade e precisão para portas e janelas, com acabamento impecável.</p>
-        </div>
-        <div class="product-card" onclick="showImages('vigas')">
-            <img src="assets/images/produto-viga.png" alt="Vigas">
-            <h3>Vigas</h3>
-            <p>Estruturas robustas para construção civil, com madeira de reflorestamento.</p>
-        </div>
-        <div class="product-card" onclick="showImages('painéis')">
-            <img src="assets/images/produto-painel.png" alt="Painéis">
-            <h3>Painéis</h3>
-            <p>Versatilidade para móveis e decoração, com acabamento natural ou especial.</p>
-        </div>
+      <div class="product-card" data-gallery="soja">
+        <img src="site-institucional/public/assets/images/soja.png" alt="Soja">
+        <h3 data-i18n="product-soja-title">Soja</h3>
+        <p data-i18n="product-soja-desc">Grãos selecionados de alta qualidade, produzidos de forma sustentável para atender às demandas globais.</p>
+      </div>
+      <div class="product-card" data-gallery="milho">
+        <img src="site-institucional/public/assets/images/milho.png" alt="Milho">
+        <h3 data-i18n="product-milho-title">Milho</h3>
+        <p data-i18n="product-milho-desc">Milho de alta performance, ideal para ração animal, indústria alimentícia e produção de etanol.</p>
+      </div>
+      <div class="product-card" data-gallery="cafe">
+        <img src="site-institucional/public/assets/images/cafe.png" alt="Café">
+        <h3 data-i18n="product-cafe-title">Café</h3>
+        <p data-i18n="product-cafe-desc">Café brasileiro de aroma e sabor inconfundíveis, cultivado nas melhores regiões do país.</p>
+      </div>
+      <div class="product-card" data-gallery="acucar">
+        <img src="site-institucional/public/assets/images/acucar.png" alt="Açúcar">
+        <h3 data-i18n="product-acucar-title">Açúcar</h3>
+        <p data-i18n="product-acucar-desc">Açúcar de alta pureza, perfeito para a indústria alimentícia e para o consumidor final.</p>
+      </div>
     </div>
-
-    <!-- Painel de Imagens -->
-    <div id="image-panel" class="image-panel" style="display:none;">
-        <span class="close" onclick="closePanel()">&times;</span>
-        <div id="image-content"></div>
-    </div>
-</section>
+  </section>
