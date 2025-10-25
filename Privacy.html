@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="site-institucional/public/assets/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wong Global Trade - Política de Privacidade</title>
+  <meta name="description" content="Exportação de produtos de produtos certificados, com qualidade, inovação e sustentabilidade.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f4f8fc;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #0a3d91 60%, #1976d2 100%);
+      color: #fff;
+      padding: 0;
+      position: relative;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      font-size: 0.95rem;
+      padding: 0.5rem 2rem 0.5rem 0;
+    }
+    .top-bar a { color: #fff; text-decoration: none; }
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      min-width: 0;
+      background: linear-gradient(90deg, #0a3d91 60%, #1976d2 100%);
+      z-index: 1000;
+      box-shadow: 0 2px 16px #0001;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background: #fff;
+      border: 8px solid #fff;
+      box-shadow: 0 2px 16px #1976d222;
+      object-fit: cover;
+      transition: transform 0.3s;
+      display: block;
+      filter: drop-shadow(0 2px 8px #0003);
+    }
+    .logo img:hover {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s, text-shadow 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #90caf9;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0; bottom: -4px;
+    }
+    nav a:hover {
+      color: #90caf9;
+      text-shadow: 0 2px 8px #1976d288;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+      padding: 2rem;
+      margin-top: 120px;
+    }
+    .section-title {
+      color: #0a3d91;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #1976d211;
+    }
+    footer {
+      background: #0a3d91;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      margin-top: 2rem;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 -2px 16px #1976d211;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <a href="tel:+5511950598602"><i class="fa fa-phone"></i> tel</a>
+      <a href="mailto:contato@bluepine.com"><i class="fa fa-envelope"></i>e-mail</a>
+      <a href="https://wa.me/5511950598602" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="logo-nav">
+      <div class="logo" style="display:flex;align-items:center;gap:0.5rem;width:100%;">
+        <a href="index.html"><img src="site-institucional/public/assets/images/logo.png" alt="Logo"></a>
+        <span style="font-size:1.2rem;font-weight:bold;letter-spacing:1px;white-space:nowrap;">Wong Global Trade</span>
+        <select id="language-select" class="language-select" aria-label="Selecionar idioma">
+          <option value="pt">🇧🇷</option>
+          <option value="en">🇺🇸</option>
+          <option value="es">🇪🇸</option>
+          <option value="zh">🇨🇳</option>
+        </select>
+        <button class="menu-mobile-btn" id="menu-mobile-btn" aria-label="Abrir menu">MENU</button>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html#home" data-i18n="menu-home">Início</a></li>
+          <li><a href="index.html#quem-somos" data-i18n="menu-about">Quem Somos</a></li>
+          <li><a href="index.html#produtos" data-i18n="menu-products">Produtos</a></li>
+          <li><a href="index.html#exportacao" data-i18n="menu-export">Exportação</a></li>
+          <li><a href="index.html#contato" data-i18n="menu-contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h1 class="section-title" data-i18n="privacy-title">Política de Privacidade</h1>
+    <p data-i18n="privacy-date">Última atualização: 24 de outubro de 2025</p>
+    <p data-i18n="privacy-p1">A sua privacidade é importante para nós. É política do nosso site respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no nosso site.</p>
+    <p data-i18n="privacy-p2">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
+    <p data-i18n="privacy-p3">Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+    <p data-i18n="privacy-p4">Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
+    <p data-i18n="privacy-p5">O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites and cannot accept responsibility or liability for their respective privacy policies.</p>
+    <p data-i18n="privacy-p6">Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez не сможем fornecer alguns dos seus serviços desejados.</p>
+    <p data-i18n="privacy-p7">O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco.</p>
+  </section>
+
+  <footer>
+    <span data-i18n="footer">&copy; 2025 Wong Global Trade - Todos os direitos reservados.<br> | <a href='Privacy.html' style='color: white;'>Política de Privacidade</a></span>
+  </footer>
+
+  <script>
+const translations = {
+  pt: {
+    "menu-home": "Início",
+    "menu-about": "Quem Somos",
+    "menu-products": "Produtos",
+    "menu-export": "Exportação",
+    "menu-contact": "Contato",
+    "footer": "&copy; 2025 Wong Global Trade - Todos os direitos reservados.<br> | <a href='Privacy.html' style='color: white;'>Política de Privacidade</a>",
+    "privacy-title": "Política de Privacidade",
+    "privacy-date": "Última atualização: 24 de outubro de 2025",
+    "privacy-p1": "A sua privacidade é importante para nós. É política do nosso site respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no nosso site.",
+    "privacy-p2": "Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.",
+    "privacy-p3": "Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.",
+    "privacy-p4": "Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.",
+    "privacy-p5": "O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites, e não podemos aceitar responsabilidade ou responsabilidade por suas respectivas políticas de privacidade.",
+    "privacy-p6": "Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não seremos capazes de fornecer alguns dos seus serviços desejados.",
+    "privacy-p7": "O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco."
+  },
+  en: {
+    "menu-home": "Home",
+    "menu-about": "About Us",
+    "menu-products": "Products",
+    "menu-export": "Export",
+    "menu-contact": "Contact",
+    "footer": "&copy; 2025 Wong Global Trade - All rights reserved.<br> | <a href='Privacy.html' style='color: white;'>Privacy Policy</a>",
+    "privacy-title": "Privacy Policy",
+    "privacy-date": "Last updated: October 24, 2025",
+    "privacy-p1": "Your privacy is important to us. It is our website's policy to respect your privacy regarding any information we may collect from you across our website.",
+    "privacy-p2": "We only ask for personal information when we truly need it to provide a service to you. We do it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.",
+    "privacy-p3": "We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.",
+    "privacy-p4": "We don’t share any personally identifying information publicly or with third-parties, except when required to by law.",
+    "privacy-p5": "Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.",
+    "privacy-p6": "You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.",
+    "privacy-p7": "Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us."
+  },
+  es: {
+    "menu-home": "Inicio",
+    "menu-about": "Quiénes Somos",
+    "menu-products": "Productos",
+    "menu-export": "Exportación",
+    "menu-contact": "Contacto",
+    "footer": "&copy; 2025 Wong Global Trade - Todos los derechos reservados.<br> | <a href='Privacy.html' style='color: white;'>Política de Privacidad</a>",
+    "privacy-title": "Política de Privacidad",
+    "privacy-date": "Última actualización: 24 de octubre de 2025",
+    "privacy-p1": "Tu privacidad es importante para nosotros. Es política de nuestro sitio web respetar tu privacidad con respecto a cualquier información que podamos recopilar de ti en nuestro sitio web.",
+    "privacy-p2": "Solo solicitamos información personal cuando realmente la necesitamos para brindarte un servicio. Lo hacemos por medios justos y legales, con tu conocimiento y consentimiento. También te informamos por qué la recopilamos and cómo se utilizará.",
+    "privacy-p3": "Solo retenemos la información recopilada durante el tiempo necesario para brindarte el servicio solicitado. Los datos que almacenamos, los protegeremos dentro de medios comercialmente aceptables para evitar pérdidas y robos, así como el acceso, divulgación, copia, uso o modificación no autorizados.",
+    "privacy-p4": "No compartimos ninguna información de identificación personal públicamente o con terceros, excepto cuando lo exija la ley.",
+    "privacy-p5": "Nuestro sitio web puede tener enlaces a sitios externos que no son operados por nosotros. Ten en cuenta que no tenemos control sobre el contenido y las prácticas de estos sitios, y no podemos aceptar responsabilidad u obligación por sus respectivas políticas de privacidad.",
+    "privacy-p6": "Eres libre de rechazar nuestra solicitud de tu información personal, en el entendimiento de que es posible que no podamos brindarte algunos de los servicios que deseas.",
+    "privacy-p7": "El uso continuado de nuestro sitio web se considerará como una aceptación de nuestras prácticas en torno a la privacidad y la información personal. Si tienes alguna pregunta sobre cómo manejamos los datos de los usuarios y la información personal, no dudes en contactarnos."
+  },
+  zh: {
+    "menu-home": "首页",
+    "menu-about": "关于我们",
+    "menu-products": "产品",
+    "menu-export": "出口",
+    "menu-contact": "联系",
+    "footer": "&copy; 2025 Wong Global Trade - 保留所有权利。<br> | <a href='Privacy.html' style='color: white;'>隐私政策</a>",
+    "privacy-title": "隐私政策",
+    "privacy-date": "最后更新：2025年10月24日",
+    "privacy-p1": "您的隐私对我们很重要。我们网站的政策是尊重您在我们网站上收集的任何信息的隐私。",
+    "privacy-p2": "我们只在真正需要时才要求您提供个人信息。我们通过公平合法的方式，在您知情和同意的情况下进行。我们还会告知您我们收集信息的原因以及将如何使用这些信息。",
+    "privacy-p3": "我们只在提供您所要求的服务所需的时间内保留所收集的信息。我们存储的数据，我们将在商业上可接受的范围内进行保护，以防止丢失和被盗，以及未经授权的访问、披露、复制、使用或修改。",
+    "privacy-p4": "除法律要求外，我们不会公开或与第三方共享任何个人身份信息。",
+    "privacy-p5": "我们的网站可能链接到非我们运营的外部网站。请注意，我们无法控制这些网站的内容和做法，也不对它们各自的隐私政策承担任何责任或义务。",
+    "privacy-p6": "您可以自由拒绝我们索取您的个人信息的要求，但请理解，我们可能无法为您提供您想要的某些服务。",
+    "privacy-p7": "您继续使用我们的网站将被视为接受我们关于隐私和个人信息的做法。如果您对我们如何处理用户数据和个人信息有任何疑问，请随时与我们联系。"
+  }
+};
+
+function setLanguage(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+}
+
+document.getElementById('language-select').addEventListener('change', function() {
+  setLanguage(this.value);
+});
+
+// Define o idioma inicial
+setLanguage('pt');
+  </script>
+</body>
+</html>
