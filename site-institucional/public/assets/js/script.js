@@ -1,20 +1,20 @@
     // Galerias de exemplo (adicione mais imagens se desejar)
     const galleries = {
       soja: [
-        'site-institucional/public/assets/images/soja1.png',
-        'site-institucional/public/assets/images/soja2.png'
+        'site-institucional/public/assets/images/soja1.webp',
+        'site-institucional/public/assets/images/soja2.webp'
       ],
       milho: [
-        'site-institucional/public/assets/images/milho1.png',
-        'site-institucional/public/assets/images/milho2.png'
+        'site-institucional/public/assets/images/milho1.webp',
+        'site-institucional/public/assets/images/milho2.webp'
       ],
       cafe: [
-        'site-institucional/public/assets/images/cafe1.png',
-        'site-institucional/public/assets/images/cafe2.png'
+        'site-institucional/public/assets/images/cafe1.webp',
+        'site-institucional/public/assets/images/cafe2.webp'
       ],
       acucar: [
-        'site-institucional/public/assets/images/acucar1.png',
-        'site-institucional/public/assets/images/acucar2.png'
+        'site-institucional/public/assets/images/acucar1.webp',
+        'site-institucional/public/assets/images/acucar2.webp'
       ]
     };
 
